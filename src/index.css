@@ -495,9 +495,14 @@ button {
 
 .messages{
   position: relative;
+  display: flex;
   margin-top: 180px;
+  column-gap: 15px;
 }
 
 .github{
-  width: 40px;
+  width: 30px;
+}
+.telegram{
+  width: 30px;
 }

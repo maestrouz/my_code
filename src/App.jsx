@@ -6,6 +6,7 @@ import "ace-builds/src-noconflict/theme-cobalt";
 import "ace-builds/src-noconflict/mode-javascript";
 import "../src/main.js";
 import github from "../src/img/github.svg";
+import telegram from "../src/img/telegram.svg";
 
 export default function App() {
   const changeFont = (fontFamily) => {
@@ -204,13 +205,15 @@ export default function App() {
             </div>
           </section>
 
-
           <button className="screenbtn" onClick={captureScreenshot}>
             Screenshot
           </button>
           <div className="messages">
-            <a href="">
-              <img className="github" src={github} alt="" />
+            <a href="https://github.com/maestrouz/my_code.git">
+              <img className="github" src={github} alt="github-icon" />
+            </a>
+            <a href="https://t.me//ergashoff_dev">
+              <img className="telegram" src={telegram} alt="telegram-icon" />
             </a>
           </div>
         </div>
