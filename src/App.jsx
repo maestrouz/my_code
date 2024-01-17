@@ -7,6 +7,7 @@ import "ace-builds/src-noconflict/mode-javascript";
 import "../src/main.js";
 import github from "../src/img/github.svg";
 import telegram from "../src/img/telegram.svg";
+import instagram from "../src/img/instagram.svg";
 
 export default function App() {
   const changeFont = (fontFamily) => {
@@ -214,6 +215,9 @@ export default function App() {
             </a>
             <a href="https://t.me//ergashoff_dev">
               <img className="telegram" src={telegram} alt="telegram-icon" />
+            </a>
+            <a href="https://instagram.com/ergashoff_dev">
+              <img className="instagram" src={instagram} alt="instagram-icon" />
             </a>
           </div>
         </div>

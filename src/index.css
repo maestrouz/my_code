@@ -444,7 +444,7 @@ button {
 }
 
 .content h2 {
-  margin-top: 170px;
+  margin-top: 210px;
   margin-left: 130px;
   color: #fff;
   font-size: 55px;
@@ -493,16 +493,34 @@ button {
   }
 }
 
-.messages{
+.messages {
   position: relative;
   display: flex;
-  margin-top: 180px;
-  column-gap: 15px;
+  margin-top: 190px;
+  justify-content: space-around;
 }
 
-.github{
+.github {
   width: 30px;
+  transition: 0.3s;
 }
-.telegram{
+.github:hover {
+  margin-top: -5px;
+  transition: 0.3s;
+}
+.telegram {
   width: 30px;
+  transition: 0.3s;
+}
+.telegram:hover {
+  margin-top: -5px;
+  transition: 0.3s;
+}
+.instagram {
+  width: 30px;
+  transition: 0.3s;
+}
+.instagram:hover {
+  margin-top: -5px;
+  transition: 0.3s;
 }
