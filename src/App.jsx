@@ -4,13 +4,24 @@ import html2canvas from "html2canvas/dist/html2canvas.esm.js";
 import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/theme-cobalt";
 import "ace-builds/src-noconflict/mode-javascript";
+import "../src/main.js";
+import github from "../src/img/github.svg";
 
 export default function App() {
+  const changeFont = (fontFamily) => {
+    if (editorRef.current) {
+      const editorElement = editorRef.current.editor.container;
+      editorElement.style.fontFamily = fontFamily;
+    }
+  };
   const [backgroundImage, setBackgroundImage] = useState("");
   const [boxShadow, setBoxShadow] = useState("");
   const editorRef = useRef(null);
 
   useEffect(() => {
+    console.log("Background Image:", backgroundImage);
+    console.log("Box Shadow:", boxShadow);
+
     const handleButtonClick = (buttonId) => {
       if (!editorRef.current) return;
       if (buttonId === "button1") {
@@ -29,6 +40,12 @@ export default function App() {
     };
 
     const pageElement = document.getElementById("page");
+    const centerElement = document.querySelector(".center"); // Select the element with the "center" class
+
+    document
+      .getElementById("button1")
+      .addEventListener("click", () => handleButtonClick("button1"));
+    // ... (add event listeners for other buttons)
 
     document
       .getElementById("button1")
@@ -49,9 +66,10 @@ export default function App() {
       .getElementById("button6")
       .addEventListener("click", () => handleButtonClick("button6"));
 
-    if (pageElement) {
+    if (centerElement) {
       pageElement.style.backgroundImage = backgroundImage;
-      pageElement.style.boxShadow = boxShadow;
+      // pageElement.style.boxShadow = boxShadow;
+      centerElement.style.boxShadow = boxShadow; // Update the box-shadow of the "center" class
     }
   }, [backgroundImage, boxShadow]);
 
@@ -165,16 +183,16 @@ export default function App() {
           <div className="fonts">
             <h3>Fonts</h3>
             <br />
-            <button className="fonts1" onClick="changeFont('Rajdhani')">
+            <button className="fonts1" onClick={() => changeFont("Rajdhani")}>
               1
             </button>
             <button
               className="fonts2"
-              onClick="changeFont2('Cormorant Garamond')"
+              onClick={() => changeFont("Cormorant Garamond")}
             >
               2
             </button>
-            <button className="fonts3" onClick="changeFont3('Zilla Slab')">
+            <button className="fonts3" onClick={() => changeFont("Zilla Slab")}>
               3
             </button>
           </div>
@@ -186,9 +204,15 @@ export default function App() {
             </div>
           </section>
 
+
           <button className="screenbtn" onClick={captureScreenshot}>
             Screenshot
           </button>
+          <div className="messages">
+            <a href="">
+              <img className="github" src={github} alt="" />
+            </a>
+          </div>
         </div>
 
         <div id="page">

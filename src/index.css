@@ -196,7 +196,6 @@ h3:hover::before {
   background-image: url(./images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 5px;
   overflow-x: hidden;
   display: flex;
   align-items: center;
@@ -276,7 +275,7 @@ h3:hover::before {
 
 .editor {
   /* width: 80%; */
-  height: 100%;
+  /* height: 100%; */
   background: #532ab46b;
   /* border: 1px solid red; */
   border-bottom-left-radius: 10px;
@@ -285,7 +284,6 @@ h3:hover::before {
   font-family: "JetBrains Mono", monospace;
   line-height: 32.5px;
   white-space: pre-wrap;
-  /* resize: horizontal; */
   z-index: 1;
   white-space: pre-wrap;
   font-weight: 500;
@@ -446,7 +444,7 @@ button {
 }
 
 .content h2 {
-  margin-top: 270px;
+  margin-top: 170px;
   margin-left: 130px;
   color: #fff;
   font-size: 55px;
@@ -456,11 +454,11 @@ button {
 
 .content h2:nth-child(1) {
   color: transparent;
-  -webkit-text-stroke: 2px rgb(0, 10, 145);
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
 }
 
 .content h2:nth-child(2) {
-  color: #000000;
+  color: #66ff0050;
   animation: animate 4s ease-in-out infinite;
 }
 
@@ -493,4 +491,13 @@ button {
       0% 100%
     );
   }
+}
+
+.messages{
+  position: relative;
+  margin-top: 180px;
+}
+
+.github{
+  width: 40px;
 }
