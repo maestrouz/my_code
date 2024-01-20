@@ -137,7 +137,7 @@ export default function App() {
       <div className="main">
         <div id="sidebar">
           <div className="bg">
-            <h3 className="theme">Theme</h3>
+            <h3 className="theme">Background</h3>
             <br />
             <button id="button1"></button>
             <button id="button2"></button>
