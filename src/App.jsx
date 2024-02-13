@@ -42,12 +42,11 @@ export default function App() {
     };
 
     const pageElement = document.getElementById("page");
-    const centerElement = document.querySelector(".center"); // Select the element with the "center" class
+    const centerElement = document.querySelector(".center");
 
     document
       .getElementById("button1")
       .addEventListener("click", () => handleButtonClick("button1"));
-    // ... (add event listeners for other buttons)
 
     document
       .getElementById("button1")
@@ -135,16 +134,50 @@ export default function App() {
   return (
     <>
       <div className="main">
+        <div id="page">
+          <div
+            className="center"
+            style={{ resize: "horizontal", overflow: "auto" }}
+          >
+            <div className="titlebar">
+              <div className="dots">
+                <div className="dot close"></div>
+                <div className="dot minimise"></div>
+                <div className="dot maximise"></div>
+              </div>
+              <div className="editable-input">
+                <input type="text" id="inputName" placeholder="Ergashoff" />
+              </div>
+            </div>
+
+            <AceEditor
+              className="editor"
+              ref={editorRef}
+              mode="javascript"
+              theme="cobalt"
+              name="codeInput"
+              editorProps={{ $blockScrolling: true }}
+              fontSize={24}
+              style={{
+                width: "100%",
+                height: "92%",
+              }}
+            />
+          </div>
+        </div>
+
         <div id="sidebar">
           <div className="bg">
             <h3 className="theme">Background</h3>
             <br />
-            <button id="button1"></button>
-            <button id="button2"></button>
-            <button id="button3"></button>
-            <button id="button4"></button>
-            <button id="button5"></button>
-            <button id="button6"></button>
+            <div className="bg-btns">
+              <button id="button1"></button>
+              <button id="button2"></button>
+              <button id="button3"></button>
+              <button id="button4"></button>
+              <button id="button5"></button>
+              <button id="button6"></button>
+            </div>
           </div>
 
           <div className="box-shadow">
@@ -200,7 +233,7 @@ export default function App() {
           </div>
 
           <section>
-            <div class="content">
+            <div className="content">
               <h2>Ergashoff</h2>
               <h2>Ergashoff</h2>
             </div>
@@ -219,38 +252,6 @@ export default function App() {
             <a href="https://instagram.com/ergashoff_dev">
               <img className="instagram" src={instagram} alt="instagram-icon" />
             </a>
-          </div>
-        </div>
-
-        <div id="page">
-          <div
-            className="center"
-            style={{ resize: "horizontal", overflow: "auto" }}
-          >
-            <div className="titlebar">
-              <div className="dots">
-                <div className="dot close"></div>
-                <div className="dot minimise"></div>
-                <div className="dot maximise"></div>
-              </div>
-              <div className="editable-input">
-                <input type="text" id="inputName" placeholder="Ergashoff" />
-              </div>
-            </div>
-
-            <AceEditor
-              className="editor"
-              ref={editorRef}
-              mode="javascript"
-              theme="cobalt"
-              name="codeInput"
-              editorProps={{ $blockScrolling: true }}
-              fontSize={24}
-              style={{
-                width: "100%",
-                height: "92%",
-              }}
-            />
           </div>
         </div>
       </div>

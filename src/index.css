@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif&family=Zilla+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Nova+Square&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Nova+Square&family=Rubik:wght@700&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"); */
 
 * {
   padding: 0;
@@ -54,22 +55,6 @@
   display: flex;
 }
 
-/* .center {
-  position: relative;
-  overflow: auto;
-  cursor: ew-resize;
-}
-
-.center::after {
-  content: "\2022";
-  position: absolute;
-  top: 50%;
-  right: 0px;
-  transform: translateY(-50%);
-  cursor: ew-resize;
-  font-size: 45px;
-  color: #fff;
-} */
 #sidebar {
   padding: 0 10px;
   height: 100%;
@@ -90,44 +75,8 @@
 }
 h3 {
   margin-left: 5px;
-  /* color: #9c8ebe; */
+  color: #9c8ebe;
   font-size: 18pxr;
-}
-h3 {
-  background-image: linear-gradient(
-    to right,
-    #03fff2,
-    #00bbff 50%,
-    #999999 50%
-  );
-  background-size: 200% 100%;
-  background-position: -100%;
-  display: inline-block;
-  /* padding: 5px 0; */
-  position: relative;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.5s ease-in-out;
-}
-
-h3:before {
-  content: "";
-  background: #54b3d6;
-  display: block;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  transition: all 0.3s ease-in-out;
-}
-
-h3:hover {
-  background-position: 0;
-}
-
-h3:hover::before {
-  width: 100%;
 }
 
 .box-shadow {
@@ -274,10 +223,7 @@ h3:hover::before {
 }
 
 .editor {
-  /* width: 80%; */
-  /* height: 100%; */
   background: #532ab46b;
-  /* border: 1px solid red; */
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow-y: none;
@@ -432,19 +378,18 @@ button {
 
 .screenbtn {
   margin-top: 30px;
-  border-radius: 15px;
   border: none;
   font-family: sans-serif;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4) inset;
+  border-radius: 15px;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 .content {
   position: relative;
 }
 
 .content h2 {
-  margin-top: 210px;
+  margin-top: 150px;
   margin-left: 130px;
   color: #fff;
   font-size: 55px;
@@ -496,7 +441,7 @@ button {
 .messages {
   position: relative;
   display: flex;
-  margin-top: 190px;
+  margin-top: 130px;
   justify-content: space-around;
 }
 
@@ -523,4 +468,87 @@ button {
 .instagram:hover {
   margin-top: -5px;
   transition: 0.3s;
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    width: 100%;
+    display: block;
+  }
+  #sidebar {
+    width: 100%;
+    height: 55%;
+    background: rgba(28, 1, 54, 0.747);
+  }
+  .box-shadow {
+    display: none;
+  }
+  .fonts {
+    display: none;
+  }
+  .bg {
+    width: 100%;
+    display: grid;
+  }
+  .theme {
+    font-size: 24px;
+    text-align: center;
+  }
+  .bg-btns {
+    display: grid;
+    row-gap: 20%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    #button1 {
+      width: 80%;
+      height: 45px;
+    }
+    #button2 {
+      width: 80%;
+      height: 45px;
+    }
+    #button3 {
+      width: 80%;
+      height: 45px;
+    }
+    #button4 {
+      width: 80%;
+      height: 45px;
+    }
+    #button5 {
+      width: 80%;
+      height: 45px;
+    }
+    #button6 {
+      width: 80%;
+      height: 45px;
+    }
+  }
+  .screenbtn {
+    width: 45%;
+    font-size: 20px;
+    margin-left: 25%;
+  }
+  .content {
+    margin-left: 18%;
+  }
+  #page {
+    width: 100%;
+    min-width: 100%;
+    background-size: cover;
+  }
+
+  .titlebar {
+    width: 100%;
+  }
+  .dots {
+    width: 30%;
+  }
+  .center {
+    width: 100%;
+    min-width: none;
+  }
+  aceEditor {
+    width: 100%;
+  }
 }
